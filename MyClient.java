@@ -1,5 +1,5 @@
 /*
-	Group: Harrison Barnes, Long Lam, Adam Seidman
+	Group: Harrison Barnes, Long Lam
 	CMPE570/670 - Data & Communication Networks
 	Practical Exercise 1
 
@@ -46,14 +46,16 @@ public class MyClient
 			String userinput = myScanner.nextLine();
 
 			//Send string to server
-			pout.println(userinput);		//Writes some String to server
-			pout.flush(); 					//Forces the data through to server
+			pout.println(userinput);
+			pout.flush();
 
 			//Establish receive buffer and wait for transmission from server
 			BufferedReader bin = new BufferedReader(new InputStreamReader(in));
 
 			//Print string from server transmission to terminal
-			System.out.println(userinput+" <=returned-as=> " + bin.readLine());
+			System.out.println("User input: " + userinput);
+			System.out.println("Returned value from Server: "+bin.readLine()); //Once the average was returned from the
+																//server, the client should automatically close itself
 
 			//Close connection and data streams
 			out.close();

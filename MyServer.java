@@ -1,5 +1,5 @@
 /*
-	Group: Harrison Barnes, Long Lam, Adam Seidman
+	Group: Harrison Barnes, Long Lam
 	CMPE570/670 - Data & Communication Networks
 	Practical Exercise 1
 
@@ -59,8 +59,10 @@ public class MyServer{
 			Socket cs = null;
 
 			//Print server information to terminal
+			System.out.println("The server has been started");
 			System.out.println("getLocalHost: "+InetAddress.getLocalHost() );
 			System.out.println("getByName:    "+InetAddress.getByName("localhost") + "\n" );
+			System.out.println("Waiting for client connection....");
 
 			//Continually loop waiting for connections
 			//Terminates when program is terminated or an exception occurs
